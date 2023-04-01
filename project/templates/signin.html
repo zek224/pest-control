@@ -8,10 +8,17 @@
     <link id="favicon" rel="icon" type="image/x-icon" href="../static/images/favicon.ico">
   </head>
   <body>
-    <script src='header.js'></script>
+    <script src='../static/scripts/header.js'></script>
     <p class="signin-text">Sign into SoilSense</p>
-    <div class="google-signin">
-      <a href="">Sign in with Google</a>
+    <a class="google-signin" href="">Sign in with Google</a>
+    <div class="form-signin">
+      <form>
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username"><br>
+        <label for="pwd">Password:</label><br>
+        <input type="password" id="pwd" name="pwd">
+        <input id="submit" type="submit" value="Login" name="">
+      </form>
     </div>
   </body>
 </html> 
