@@ -1,0 +1,42 @@
+header {
+  background: #669DDC;
+  padding: 20px 30px;
+  margin: auto;
+}
+#header-logo {
+  display: inline-block;
+  width: 65px;
+  vertical-align: middle;
+  margin-right: 10px;
+  filter: invert(98%) sepia(100%) saturate(0%) hue-rotate(24deg) brightness(104%) contrast(103%);
+}
+.header-link {
+  display: inline-block;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  margin:4px;
+}
+.header-link:hover {
+  background: #FFF;
+}
+#about {
+  width: 60px;
+  background: #EEE;
+  color: #000;
+}
+#sign-in {
+  float:right;
+  width: 150px;
+  background: #FFF;
+  color: #A6DB56;
+}
+#sign-up {
+  float:right;
+  width: 150px;
+  background: #A6DB56;
+  color: #FFF;
+}
