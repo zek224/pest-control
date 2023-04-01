@@ -2,18 +2,13 @@
 
 ## Team Members
 * Joseph Bereswill
-    - Computer Science & Business
-    - Class of 2024
+    - Computer Science & Business '24
 * Steven Kravitz
-    - Computer Science & Business
-    - Class of 2024
+    - Computer Science & Business '24
 * Zeeshan Khan
-    - Computer Science & Engineering
-    - Class of 2024
+    - Computer Science & Engineering '24
 * Bharath Jyothi
-    - Computer Science & Business
-    - Class of 2024
+    - Computer Science & Business '24
 * Jordan Schrier
-    - Computer Science & Design
-    - Class of 2025
+    - Computer Science & Design '25
 
