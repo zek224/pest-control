@@ -1,0 +1,18 @@
+.signin-text {
+  display: block;
+  margin: 20px 10%;
+  text-align: center;
+  font-size:40px;
+  color: #669DDC;
+  border-radius: 6px;
+}
+#google-signin {
+  margin: auto;
+  width: 200px;
+  border: 3px solid black;
+  padding:4px;
+  text-align: center;
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
