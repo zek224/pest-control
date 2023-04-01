@@ -8,7 +8,7 @@ source venv/bin/activate
 . venv/bin/activate
 
 # Install the requirements
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 
 # Run the application
 uvicorn --app-dir=. project.main:app --reload
