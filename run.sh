@@ -11,7 +11,9 @@ source venv/bin/activate
 pip install -r requirements.txt
 
 # Run the application
-uvicorn main:app --reload
+uvicorn --app-dir=. project.main:app --reload
+
+#uvicorn main:app --reload
 
 # Deactivate the Virtual Environment
 deactivate
