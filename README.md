@@ -17,3 +17,14 @@
     - Computer Science & Design '25
     - <jls225@lehigh.edu>
 
+## Problem Statement
+
+## Proposed Solution
+
+## UI Mockups
+
+## SOftware Architecture Diagram 
+
+## Entity-Relationship (ER) Diagram
+
+## State Flow Machine
