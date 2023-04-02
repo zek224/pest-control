@@ -60,7 +60,12 @@ To run on Google Cloud Platform (GCP) App Engine:
   - <https://pest-control-382419.uk.r.appspot.com/>
 
 ## UI Mockups
-https://www.figma.com/file/mrhyOBfPwQ91PvP1jtOK52/Wireframing-in-Figma?node-id=0%3A1&t=DZ1pKnKe50oLuD5o-1
+
+![Screen 1](ReadmeArtifacts/screen1.png)
+
+![Screen 2](ReadmeArtifacts/screen2.png)
+
+![Screen 3](ReadmeArtifacts/screen3.png)
 
 ## Software Architecture
 
