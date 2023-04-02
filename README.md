@@ -96,3 +96,9 @@ To run on Google Cloud Platform (GCP) App Engine:
 <p>Phosphates are essential for plant growth, but excess phosphates in soil can be detrimental to crops and water quality. Our solution will provide farmers with real-time data on the levels of phosphates in their soil, enabling them to make informed decisions about when and how much fertilizer to apply.</p>
 
 ## Citations
+
+https://cloud.google.com/source-repositories/docs?utm_source=google&utm_medium=cpc&utm_campaign=na-US-all-en-dr-bkws-all-all-trial-b-dr-1605212&utm_content=text-ad-none-any-DEV_c-CRE_648217203480-ADGP_Desk%20%7C%20BKWS%20-%20BRO%20%7C%20Txt%20~%20Cloud%20Source%20Repositories-KWID_43700075200065124-aud-1462235314027%3Akwd-327322054973&utm_term=KW_google%20cloud%20repository-ST_google%20cloud%20repository&gclid=Cj0KCQjwz6ShBhCMARIsAH9A0qXURjrwUUaczEop4AZgfqbWGlLxkoQYEgJW0aR1Xt_KzuOgN6Vdw18aAj0eEALw_wcB&gclsrc=aw.ds
+
+https://www.freecodecamp.org/news/javascript-get-current-date-todays-date-in-js/
+
+https://tutlinks.com/deploy-fastapi-app-on-google-cloud-platform/
