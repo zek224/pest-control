@@ -36,6 +36,8 @@ Design a technology-based solution that aims to tackle an issue related to one o
 
 ## Proposed Solution
 
+
+
 ## Run Instructions
 
 To run on local server: 
@@ -59,6 +61,8 @@ To run on Google Cloud Platform (GCP) App Engine:
 ## Software Architecture Diagram
 
 ## Entity-Relationship (ER) Diagram
+
+![ER Diagram 2](ReadmeArtifacts/soilsense_er.png)
 
 ## State Flow Machine
 
