@@ -3,11 +3,40 @@
   <head>
     <title>Data Entry</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" href="../static/home.css"/>
+    <link rel="stylesheet" href="../static/dataEntry.css"/>
+    <link rel="stylesheet" href="../static/all.css"/>
     <link id="favicon" rel="icon" type="image/x-icon" href="../static/images/favicon.ico">
   </head>
   <body>
-      <p> test</p>
-      <p>dataENT dataENT dataENT dataENT</p>
+    <script src='../static/scripts/header.js'></script>
+    <div class="form-signin">
+      <form id="entry" method="POST">
+        <label for="source">Source:</label><br>
+        <input type="text" id="source" name="source"><br>
+        <label for="measurement">Phosphate Measurement (mg/L):</label><br>
+        <input type="text" id="measurement" name="measurement">
+        <input type="button" id="submit" value="Submit" onclick="sendEntry()">
+      </form>
+    </div>
   </body>
+  <script>
+    function sendEntry() {
+      var source_id = document.getElementById('source').value;
+      var measurement = document.getElementById('measurement').value;
+      let date = new Date().toJSON().slice(0, 10);
+      console.log('data entry method invoked');
+      fetch('/sendEntry', {
+        method: 'POST',
+        body: JSON.stringify({source_id: source_id, measurement: measurement, date: date}),
+        headers: {
+          'Content-Type': 'application/json'  
+        }
+      })
+      .then(response => {
+        alert("Entry successfully submitted");
+        parent.location='/';
+      })
+      .catch("Fetch Error",error => console.log(error));
+    } 
+  </script>
 </html>
