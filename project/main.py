@@ -43,9 +43,17 @@ async def dataEntry():
     #get and load the dataEntry page
     dataEntryTemplate = env.get_template("dataEntry.html")
     return dataEntryTemplate.render()
+    
 
 @app.get("/visualizations", response_class=HTMLResponse)
 async def visualizations():
     #get and load the visualizations page
     visualizationsTemplate = env.get_template("visualizations.html")
     return visualizationsTemplate.render()
+
+@app.post("/sendEntry")
+async def sendEntry():
+    source_id = Request.json['source_id']
+    measurement = Request.json['measurement']
+    farm_id = Request.json['farm_id']
+    date = Request.json['date']
