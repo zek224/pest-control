@@ -4,10 +4,9 @@ template.innerHTML =
   <link rel="stylesheet" href="../static/header.css"/>
   <header>
     <nav>
-      <a href="home.html"id="header-logo"><img src="../images/vector.svg"></a>
-      <a class="header-link" id="about" href="about.html">About</a>
-      <a class="header-link" id="sign-up" href="signup.html">Sign up</a>
-      <a class="header-link" id="sign-in" href="signin.html">Sign in</a>
+      <button onclick="home.html"id="header-logo"><img src="../images/vector.svg"></button>
+      <button class="header-link" id="about" onclick="parent.location='about.html'">About</button>
+      <button class="header-link" id="sign-in" onclick="parent.location='signin.html'">Sign in</button>
     </nav>
   </header>
 `

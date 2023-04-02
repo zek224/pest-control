@@ -32,6 +32,12 @@ async def about():
     aboutTemplate = env.get_template("about.html")
     return aboutTemplate.render()
 
+@app.get("/signin", response_class=HTMLResponse)
+async def signin():
+    #get and load the about page
+    aboutTemplate = env.get_template("signin.html")
+    return aboutTemplate.render()
+
 @app.get("/dataEntry", response_class=HTMLResponse)
 async def dataEntry():
     #get and load the dataEntry page
