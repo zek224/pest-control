@@ -1,18 +1,33 @@
-#home-logo {
-  display: block;
-  margin-top: 60px;
-  margin-left: 30%;
-  margin-right: 30%;
-  width: 40%; 
+.tk-montserrat { font-family: "montserrat",sans-serif; }
+
+.logo {
+	display: block;
+    margin-top: 60px;
+    margin-left: 37%;
+    margin-right: 20%;
+    width: 20%;
+	justify-content: center;
+}
+@media (prefers-reduced-motion: no-preference) {   .logo {  animation: HomePage-logo-spin 5s ease-in-out 400ms 2 alternate;    }  }
+@keyframes HomePage-logo-spin {    from {      transform: rotate(0deg);    }    to {      transform: rotate(360deg);  }  }
+#text-only-logo {
+	display: block;
+    margin-top: 60px;
+    margin-left: 37%;
+    margin-right: 20%;
+    width: 25%;
+	justify-content:  center;
 }
 #home-text {
-  display: block;
-  margin: 20px 10%;
-  width: 80%;
-  text-align: center;
-  font-size:40px;
-  color: #669DDC;
-  border-radius: 6px;
+    display: block;
+    margin: 20px 10%;
+    width: 80%;
+    text-align: center;
+    font-size: 40px;
+    color: #669DDC;
+    border-radius: 6px;
+    font-family: "Montserrat Regular";
+    font-style: normal;
 }
 #home-entry {
   display: block;
