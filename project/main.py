@@ -57,3 +57,10 @@ async def sendEntry():
     measurement = Request.json['measurement']
     farm_id = Request.json['farm_id']
     date = Request.json['date']
+
+@app.post("/sendVisualizations")
+async def sendVisualizations():
+    farm_id = Request.json['farm_id']
+    source_id = Request.json['source_id']
+    start_date = Request.json['start_date']
+    end_date = Request.json['end_date']
