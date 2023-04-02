@@ -37,7 +37,9 @@ Design a technology-based solution that aims to tackle an issue related to one o
 
 ## Proposed Solution
 
+<p>Our proposed solution to the problem of soil contamination due to high phosphate levels is to develop a web application using Google Cloud Platform's App Engine. The application will utilize the Google Maps API to map the land coverage and other external datasets to evaluate if a farmer's soil is potentially contaminated by providing visualizations with python modules such as matplotlib. By monitoring phosphate levels in the soil, farmers can take corrective measures to prevent soil degradation and increase crop yields. This web application will provide real-time monitoring of soil health, allowing farmers to make data-driven decisions that will ultimately lead to more sustainable farming practices.</p>
 
+<p>This potential web application has the potential to significantly impact the agricultural industry by providing farmers with a user-friendly tool to monitor the health of their soil. By detecting potential contamination and providing recommendations for remediation, this tool can improve crop yield, reduce environmental harm, and ultimately benefit both farmers and consumers. Additionally, this web application can help reduce the cost of monitoring soil health, as it is an affordable and scalable solution that can be used by farmers of all sizes.</p>
 
 ## Run Instructions
 
@@ -60,13 +62,21 @@ To run on Google Cloud Platform (GCP) App Engine:
 ## UI Mockups
 https://www.figma.com/file/mrhyOBfPwQ91PvP1jtOK52/Wireframing-in-Figma?node-id=0%3A1&t=DZ1pKnKe50oLuD5o-1
 
-## Software Architecture Diagram
+## Software Architecture
+
+#### Database:
+  - MySQL hosted on **Google Cloud Platform's** **App Engine** in conjunction with the **Google SQL Database**
+
+#### Backend:
+  - Locally configured routes in Java hosted on **FastAPI**
+
+### Frontend:
+  - Written in HTML, Javascript, and CSS
+  - Map display using **Google Maps API**
 
 ## Entity-Relationship (ER) Diagram
 
 ![ER Diagram 2](ReadmeArtifacts/soilsense_er.png)
-
-## State Flow Machine
 
 ## Venture Capital Funding & Stakeholder Impact
 
