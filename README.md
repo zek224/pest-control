@@ -22,9 +22,9 @@
 
 Design a technology-based solution that aims to tackle an issue related to one of the climate change subtopics presented earlier: 
 
-(1) sustainability
-(2) saving the ocean
-(3) disaster management
+1. sustainability
+2. saving the ocean
+3. disaster management
 
 ### Chosen Case Problem: Phosphate and Nitrate levels in soils, contaminating nearby crops and water sources
 
