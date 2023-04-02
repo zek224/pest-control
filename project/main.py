@@ -32,14 +32,35 @@ async def about():
     aboutTemplate = env.get_template("about.html")
     return aboutTemplate.render()
 
+@app.get("/signin", response_class=HTMLResponse)
+async def signin():
+    #get and load the about page
+    aboutTemplate = env.get_template("signin.html")
+    return aboutTemplate.render()
+
 @app.get("/dataEntry", response_class=HTMLResponse)
 async def dataEntry():
     #get and load the dataEntry page
     dataEntryTemplate = env.get_template("dataEntry.html")
     return dataEntryTemplate.render()
+    
 
 @app.get("/visualizations", response_class=HTMLResponse)
 async def visualizations():
     #get and load the visualizations page
     visualizationsTemplate = env.get_template("visualizations.html")
     return visualizationsTemplate.render()
+
+@app.post("/sendEntry")
+async def sendEntry():
+    source_id = Request.json['source_id']
+    measurement = Request.json['measurement']
+    farm_id = Request.json['farm_id']
+    date = Request.json['date']
+
+@app.post("/sendVisualizations")
+async def sendVisualizations():
+    farm_id = Request.json['farm_id']
+    source_id = Request.json['source_id']
+    start_date = Request.json['start_date']
+    end_date = Request.json['end_date']

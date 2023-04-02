@@ -3,11 +3,45 @@
   <head>
     <title>Visualizations</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" href="../static/home.css"/>
+    <link rel="stylesheet" href="../static/visualizations.css"/>
+    <link rel="stylesheet" href="../static/all.css"/>
     <link id="favicon" rel="icon" type="image/x-icon" href="../static/images/favicon.ico">
   </head>
   <body>
-      <p> test</p>
-      <p>vis vis vis vis vis vis vis vis</p>
+    <script src='../static/scripts/header.js'></script>
+    <div class="form-signin">
+      <form class="visualizations-form" method="POST">
+        <label for="source">Source:</label><br>
+        <input type="text" id="source" name="source"><br>
+        <label for="farm">Farm:</label><br>
+        <input type="text" id="farm" name="farm"><br>
+        <label for="startDate">Start Date:</label><br>
+        <input type="date" id="startDate" name="startDate"><br>
+        <label for="endDate">End Date:</label><br>
+        <input type="date" id="endDate" name="endDate"><br>
+        <input type="button" id="submit" value="Submit" onclick="sendVisualizations()">
+      </form>
+    </div>
+    <script>
+      function sendVisualizations() {
+        var source_id = document.getElementById('source').value;
+        var farm_id = document.getElementById('farm').value;
+        var start_date = document.getElementById('startDate').value;
+        let end_date = document.getElementById('endDate').value;
+        console.log('visualizations entry method invoked');
+        fetch('/sendVisualizations', {
+          method: 'POST',
+          body: JSON.stringify({source_id: source_id, farm_id: farm_id, start_date: start_date, end_date: end_date}),
+          headers: {
+            'Content-Type': 'application/json'  
+          }
+        })
+        .then(response => {
+          alert("Visualization successfully submitted");
+          parent.location='/';
+        })
+        .catch("Fetch Error",error => console.log(error));
+      } 
+    </script>
   </body>
 </html>
