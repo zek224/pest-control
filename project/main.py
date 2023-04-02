@@ -64,3 +64,9 @@ async def sendVisualizations():
     source_id = Request.json['source_id']
     start_date = Request.json['start_date']
     end_date = Request.json['end_date']
+
+@app.get("/maps", response_class=HTMLResponse)
+async def maps():
+    #get and load the maps page
+    mapsTemplate = env.get_template("maps.html")
+    return mapsTemplate.render()

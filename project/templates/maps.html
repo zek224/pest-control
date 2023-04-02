@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SoilSense Map</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGua7ziUSIi2e7h6rJcxdenCrUPuEmVBY&callback=initMap&libraries=drawing&v=weekly" async defer></script>
+    <script>
+      let map;
+
+      function initMap() {
+        map = new google.maps.Map(document.getElementById("map"), {
+          center: { lat: -34.397, lng: 150.644 },
+          zoom: 8,
+        });
+
+        let currentRectangle;
+
+            const drawingManager = new google.maps.drawing.DrawingManager({
+                drawingMode: google.maps.drawing.OverlayType.RECTANGLE,
+                drawingControl: true,
+                drawingControlOptions: {
+                position: google.maps.ControlPosition.TOP_CENTER,
+                drawingModes: [
+                    google.maps.drawing.OverlayType.RECTANGLE,
+                ],
+                },
+            });
+        
+        // Create an HTML form for displaying the latitude, longitude, and details
+        const form = document.createElement("form");
+            form.innerHTML = `
+                <button type="button" id="closeButton" style="float: right; color: white; background-color: red; border: none; font-weight: bold;">&times;</button>
+                <label for="latitude">Latitude:</label>
+                <input type="text" id="latitude" name="latitude" readonly>
+                <br><label for="longitude">Longitude:</label>
+                <input type="text" id="longitude" name="longitude" readonly>
+                <br><label for="Notes">Notes:</label>
+                <input type="text" id="notes" name="notes">
+            `;
+            form.style.display = "none";
+            form.style.backgroundColor = "white";
+            form.style.padding = "10px";
+            form.style.border = "1px solid black";
+            form.style.maxWidth = "300px";
+            const formOverlay = new google.maps.OverlayView();
+            formOverlay.onAdd = () => {
+                let panes = formOverlay.getPanes();
+                panes.floatPane.appendChild(form);
+            };
+            formOverlay.draw = () => {};
+            formOverlay.setMap(map);
+
+            google.maps.event.addListener(drawingManager, 'rectanglecomplete', (rectangle) => {
+                if (currentRectangle) {
+                currentRectangle.setMap(null);
+                form.style.display = "none";
+                }
+                currentRectangle = rectangle;
+
+                // Show the form and set the latitude and longitude values
+                const bounds = rectangle.getBounds();
+                const northEast = bounds.getNorthEast();
+                const southWest = bounds.getSouthWest();
+                const center = bounds.getCenter();
+
+                form.style.display = "block";
+                formOverlay.draw = () => {
+                const projection = formOverlay.getProjection();
+                const position = projection.fromLatLngToDivPixel(center);
+                form.style.left = `${position.x}px`;
+                form.style.top = `${position.y}px`;
+                };
+                formOverlay.draw();
+
+                const latitudeInput = form.querySelector("#latitude");
+                const longitudeInput = form.querySelector("#longitude");
+                latitudeInput.value = center.lat().toFixed(6);
+                longitudeInput.value = center.lng().toFixed(6);
+
+                // Add event listener for the close button
+                const closeButton = form.querySelector("#closeButton");
+                closeButton.addEventListener("click", () => {
+                currentRectangle.setMap(null);
+                currentRectangle = null;
+                form.style.display = "none";
+                });
+            });
+
+            drawingManager.setMap(map);
+            }
+
+            window.initMap = initMap;
+
+      
+    </script>
+    <style>
+      #map {
+        height: 100%;
+      }
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+  </body>
+</html>
