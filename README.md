@@ -57,7 +57,7 @@ To run on Google Cloud Platform (GCP) App Engine:
 1. Deploy by running GCP SDK in the project directory
 
 2. open the application website with this url: 
-  - <https://pest-control-2.uk.r.appspot.com>
+  - <pest-control-2.uk.r.appspot.com>
 
 ## UI Mockups
 
