@@ -14,7 +14,9 @@
         <label for="source">Source:</label><br>
         <input type="text" id="source" name="source"><br>
         <label for="measurement">Phosphate Measurement (mg/L):</label><br>
-        <input type="text" id="measurement" name="measurement">
+        <input type="text" id="measurement" name="measurement"><br>
+        <label for="farm">Farm ID:</label><br>
+        <input type="text" id="farm" name="farm"><br>
         <input type="button" id="submit" value="Submit" onclick="sendEntry()">
       </form>
     </div>
@@ -23,11 +25,13 @@
     function sendEntry() {
       var source_id = document.getElementById('source').value;
       var measurement = document.getElementById('measurement').value;
+      var farm_id = document.getElementById('farm').value;
       let date = new Date().toJSON().slice(0, 10);
+      alert(farm_id);
       console.log('data entry method invoked');
       fetch('/sendEntry', {
         method: 'POST',
-        body: JSON.stringify({source_id: source_id, measurement: measurement, date: date}),
+        body: JSON.stringify({farm_id: farm_id, source_id: source_id, measurement: measurement, date: date}),
         headers: {
           'Content-Type': 'application/json'  
         }

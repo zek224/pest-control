@@ -6,7 +6,6 @@ template.innerHTML =
     <nav>
       <a href="/"id="header-logo"><img src="../static/images/vector.svg"></a>
       <a class="header-link" id="about" href="about">About</a>
-      <a class="header-link" id="sign-in" href="signin">Sign in</a>
     </nav>
   </header>
 `

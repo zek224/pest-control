@@ -1,14 +1,14 @@
 .form-signin {
   display:block;
   margin: 10px auto;  
-  width: 400px;
+  width: 320px;
   border: 1px solid black;
   text-align: center;
   font-size: 20px;
   text-decoration: none;
   padding:4px;
 }
-#submit {
+#submit { 
   width:60%;
   background:#669DDC;
   margin:8px;
