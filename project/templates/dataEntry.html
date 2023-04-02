@@ -27,7 +27,6 @@
       var measurement = document.getElementById('measurement').value;
       var farm_id = document.getElementById('farm').value;
       let date = new Date().toJSON().slice(0, 10);
-      alert(farm_id);
       console.log('data entry method invoked');
       fetch('/sendEntry', {
         method: 'POST',
