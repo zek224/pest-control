@@ -26,7 +26,7 @@ Design a technology-based solution that aims to tackle an issue related to one o
 (2) saving the ocean
 (3) disaster management
 
-### Our specific case problem: Phosphate and Nitrate levels in soils, contaminating nearby crops and water sources
+### Chosen Case Problem: Phosphate and Nitrate levels in soils, contaminating nearby crops and water sources
 
 <p>Phosphate is a naturally occurring mineral that is essential for plant growth, but too much of it can have negative impacts on both soil and water quality. When farmers apply excessive amounts of phosphate-based fertilizers, the excess phosphate can accumulate in the soil, leading to soil degradation and decreased crop yields over time.</p>
 
@@ -44,13 +44,15 @@ To run on local server:
 
 2. run, *bash run.sh*
 
-3. redirect to local host <http://127.0.0.1:8000>
+3. redirect to local host: 
+  - <http://127.0.0.1:8000>
 
 To run on Google Cloud Platform (GCP) App Engine:
 
 1. Deploy by running GCP SDK in the project directory
 
-2. open the application website with this url: <https://pest-control-382419.uk.r.appspot.com/>
+2. open the application website with this url: 
+  - <https://pest-control-382419.uk.r.appspot.com/>
 
 ## UI Mockups
 
