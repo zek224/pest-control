@@ -8,8 +8,8 @@
 
       function initMap() {
         map = new google.maps.Map(document.getElementById("map"), {
-          center: { lat: -34.397, lng: 150.644 },
-          zoom: 8,
+          center: { lat: 37.501, lng: -94.0006 },
+          zoom: 5,
         });
 
         let currentRectangle;
@@ -35,7 +35,28 @@
                 <input type="text" id="longitude" name="longitude" readonly>
                 <br><label for="Notes">Notes:</label>
                 <input type="text" id="notes" name="notes">
+                <br><button type="button" id="submitButton">Submit</button>
             `;
+
+            // Add event listener for the submit button
+            const submitButton = form.querySelector("#submitButton");
+            submitButton.addEventListener("click", async () => {
+                const latitude = form.querySelector("#latitude").value;
+                const longitude = form.querySelector("#longitude").value;
+                const notes = form.querySelector("#notes").value;
+
+                const response = await fetch("/submit", {
+                    method: "POST",
+                    headers: {
+                    "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({ latitude, longitude, notes }),
+                });
+
+                const result = await response.json();
+                console.log(result);
+            });
+
             form.style.display = "none";
             form.style.backgroundColor = "white";
             form.style.padding = "10px";
@@ -48,6 +69,7 @@
             };
             formOverlay.draw = () => {};
             formOverlay.setMap(map);
+
 
             google.maps.event.addListener(drawingManager, 'rectanglecomplete', (rectangle) => {
                 if (currentRectangle) {
