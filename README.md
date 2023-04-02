@@ -1,4 +1,4 @@
-# Pest Control Hackaton
+# Pest Control Hackathon
 
 ## Team Members
 
