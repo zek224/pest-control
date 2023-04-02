@@ -20,13 +20,14 @@
 
 ## Problem Statement
 
-Design a technology-based solution that aims to tackle an issue related to one of the climate change subtopics presented earlier: 
+Design a technology-based solution that aims to tackle an issue related to one of the climate change subtopics presented earlier:
 
 1. sustainability
 2. saving the ocean
 3. disaster management
 
-### Chosen Case Problem: 
+### Chosen Case Problem:
+
 #### Examining Phosphate levels in agricultural soil, contaminating nearby crops and water sources for farmers
 
 <p>Phosphate is a naturally occurring mineral that is essential for plant growth, but too much of it can have negative impacts on both soil and water quality. When farmers apply excessive amounts of phosphate-based fertilizers, the excess phosphate can accumulate in the soil, leading to soil degradation and decreased crop yields over time.</p>
@@ -43,21 +44,23 @@ Design a technology-based solution that aims to tackle an issue related to one o
 
 ## Run Instructions
 
-To run on local server: 
+To run on local server:
 
 1. cd into working directory pest-control
 
-2. run, *bash run.sh*
+2. run, _bash run.sh_
 
-3. redirect to local host: 
-  - <http://127.0.0.1:8000>
+3. redirect to local host:
+
+- <http://127.0.0.1:8000>
 
 To run on Google Cloud Platform (GCP) App Engine:
 
 1. Deploy by running GCP SDK in the project directory
 
-2. open the application website with this url: 
-  - <pest-control-2.uk.r.appspot.com>
+2. open the application website with this url:
+
+- <pest-control-2.uk.r.appspot.com>
 
 ## UI Mockups
 
@@ -70,14 +73,17 @@ To run on Google Cloud Platform (GCP) App Engine:
 ## Software Architecture
 
 #### Database:
-  - MySQL hosted on **Google Cloud Platform's** **App Engine** in conjunction with the **Google SQL Database**
+
+- MySQL hosted on **Google Cloud Platform's** **App Engine** in conjunction with the **Google SQL Database**
 
 #### Backend:
-  - Locally configured routes in Java hosted on **FastAPI**
+
+- Locally configured routes in Java hosted on **FastAPI**
 
 ### Frontend:
-  - Written in HTML, Javascript, and CSS
-  - Map display using **Google Maps API**
+
+- Written in HTML, Javascript, and CSS
+- Map display using **Google Maps API**
 
 ## Entity-Relationship (ER) Diagram
 
