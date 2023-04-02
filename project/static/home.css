@@ -3,9 +3,9 @@
 .logo {
 	display: block;
     margin-top: 60px;
-    margin-left: 37%;
+    margin-left: 40%;
     margin-right: 20%;
-    width: 20%;
+    width: 17%;
 	justify-content: center;
 }
 @media (prefers-reduced-motion: no-preference) {   .logo {  animation: HomePage-logo-spin 5s ease-in-out 400ms 2 alternate;    }  }
